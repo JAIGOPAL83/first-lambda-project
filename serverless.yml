@@ -10,6 +10,9 @@ provider:
   iam:
     role: arn:aws:iam::478967562602:role/HRMSLambdaRole
 
+plugins:
+  - serverless-deployment-bucket
+
 functions:
   hello:
     handler: index.handler

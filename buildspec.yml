@@ -10,6 +10,7 @@ phases:
       - npm install
   build:
     commands:
+      - serverless plugin install -n serverless-deployment-bucket
       - serverless deploy --stage dev
 
 cache:
