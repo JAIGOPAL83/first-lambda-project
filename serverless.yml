@@ -1,0 +1,19 @@
+service: first-lambda-project
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  stage: dev
+  region: ap-southeast-2
+
+  iam:
+    role: arn:aws:iam::478967562602:role/HRMSLambdaRole
+
+functions:
+  hello:
+    handler: index.handler
+    events:
+      - httpApi:
+          path: /
+          method: get
